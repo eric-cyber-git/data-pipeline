@@ -1,10 +1,10 @@
-# 🧠 Threat-Enriched Log Pipeline
+# Threat-Enriched Log Pipeline
 
 This project demonstrates how to build a lightweight, Python-based data pipeline for enriching and forwarding security logs. Designed to simulate a real-world detection engineering workflow, this pipeline extracts log data from a SQL database, enriches IP addresses using VirusTotal threat intelligence, and sends the structured results to a syslog-compatible SIEM (e.g., Splunk).
 
 ---
 
-## 🚀 Overview
+## Overview
 
 **Pipeline Flow:**
 1. **SQL Extraction**: Pulls unprocessed web application logs from a Microsoft SQL Server database.
@@ -16,7 +16,7 @@ This project demonstrates how to build a lightweight, Python-based data pipeline
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 main.py                         # Entry point for executing the pipeline
    Functions/
