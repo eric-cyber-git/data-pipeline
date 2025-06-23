@@ -18,15 +18,15 @@ This project demonstrates how to build a lightweight, Python-based data pipeline
 
 ## 📁 Project Structure
 ```
-main.py # Entry point for executing the pipeline
+main.py                         # Entry point for executing the pipeline
    Functions/
-      -Sql_extract.py # SQL fetch logic & DB abstraction
-      -enrich.py # IP enrichment logic
-      -send_logs.py # Syslog output module
-      -utils.py # Checkpoint file management
-      -virus_total_ap.py # VirusTotal API integration
+      -Sql_extract.py           # SQL fetch logic & DB abstraction
+      -enrich.py                # IP enrichment logic
+      -send_logs.py             # Syslog output module
+      -utils.py                 # Checkpoint file management
+      -virus_total_ap.py        # VirusTotal API integration
    config/
-      -checkpoint.json # Tracks last processed log_id
+      -checkpoint.json          # Tracks last processed log_id
 ```  
 ---
 
