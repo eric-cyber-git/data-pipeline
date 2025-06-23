@@ -2,10 +2,7 @@ import requests
 import os
 
 
-
 VT_API = os.getenv('VT_API_KEY')
-
-
 def VT_API_IP_Report(ip_address):
     """
     Queries the VirusTotal API for an IPv4 address report.
@@ -14,7 +11,6 @@ def VT_API_IP_Report(ip_address):
 
     url = f"https://www.virustotal.com/api/v3/ip_addresses/{ip_address}"
     headers = {"x-apikey": VT_API}
-
     response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
