@@ -46,7 +46,7 @@ pip install pyodbc requests
 ```
 VT_API_KEY="your_virustotal_api_key"
 ```
-### 4. Create Database Table and fill it with data
+### 4. Create Database Table
 
 Populate this table with sample or real log data.
 
