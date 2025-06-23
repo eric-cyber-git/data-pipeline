@@ -17,7 +17,7 @@ This project demonstrates how to build a lightweight, Python-based data pipeline
 ---
 
 ## 📁 Project Structure
-
+```
 main.py # Entry point for executing the pipeline
    Functions/
       Sql_extract.py # SQL fetch logic & DB abstraction
@@ -27,7 +27,7 @@ main.py # Entry point for executing the pipeline
       virus_total_ap.py # VirusTotal API integration
    config/
       checkpoint.json # Tracks last processed log_id
-      
+```  
 ---
 
 ## Setup Instructions
@@ -46,15 +46,7 @@ pip install pyodbc requests
 
 VT_API_KEY="your_virustotal_api_key"
 
-### 4. Create Database Table
-
-CREATE TABLE dbo.web_application (
-    log_id INT PRIMARY KEY IDENTITY,
-    timestamp DATETIME,
-    ip_address VARCHAR(45),
-    resource NVARCHAR(MAX),
-    query NVARCHAR(MAX)
-);
+### 4. Create Database Table and fill it with data
 
 Populate this table with sample or real log data.
 
