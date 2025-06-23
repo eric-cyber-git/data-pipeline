@@ -64,14 +64,16 @@ python main.py
 
 Logs will be enriched and forwarded to 127.0.0.1:514 over UDP as JSON.
 
-📌 Notes
+
+# Notes
 The VirusTotal API has a public request limit (4 requests/min); the script includes a time.sleep(15) to avoid throttling.
 
 This project is intentionally modular. You can easily swap the enrichment provider, change the data source, or update the output destination.
 
 Checkpointing ensures the pipeline is idempotent and only processes new entries.
 
-💡 Why This Matters
+
+# Why This Matters
 This project bridges operational and strategic skills in detection engineering:
 
 Writing Python pipelines for real-world SOC needs
