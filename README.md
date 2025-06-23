@@ -18,20 +18,19 @@ This project demonstrates how to build a lightweight, Python-based data pipeline
 
 ## 📁 Project Structure
 
-.
-├── main.py # Entry point for executing the pipeline
-├── functions/
-│ ├── sql_extract.py # SQL fetch logic & DB abstraction
-│ ├── enrich.py # IP enrichment logic
-│ ├── send_logs.py # Syslog output module
-│ ├── utils.py # Checkpoint file management
-│ └── Virus_Total_API.py # VirusTotal API integration
-├── config/
-│ └── checkpoint.json # Tracks last processed log_id
-
+main.py # Entry point for executing the pipeline
+   Functions/
+      Sql_extract.py # SQL fetch logic & DB abstraction
+      enrich.py # IP enrichment logic
+      send_logs.py # Syslog output module
+      utils.py # Checkpoint file management
+      virus_total_ap.py # VirusTotal API integration
+   config/
+      checkpoint.json # Tracks last processed log_id
+      
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Prerequisites
 - Python 3.9+
@@ -40,17 +39,15 @@ This project demonstrates how to build a lightweight, Python-based data pipeline
 - VirusTotal API key
 
 ### 2. Install Dependencies
-```bash
+
 pip install pyodbc requests
-3. Set Environment Variable
-bash
-Copy
-Edit
-export VT_API_KEY="your_virustotal_api_key"
-4. Create Database Table
-sql
-Copy
-Edit
+
+### 3. Set Environment Variable
+
+VT_API_KEY="your_virustotal_api_key"
+
+### 4. Create Database Table
+
 CREATE TABLE dbo.web_application (
     log_id INT PRIMARY KEY IDENTITY,
     timestamp DATETIME,
@@ -58,13 +55,13 @@ CREATE TABLE dbo.web_application (
     resource NVARCHAR(MAX),
     query NVARCHAR(MAX)
 );
+
 Populate this table with sample or real log data.
 
-5. Run the Pipeline
-bash
-Copy
-Edit
+### 5. Run the Pipeline
+
 python main.py
+
 Logs will be enriched and forwarded to 127.0.0.1:514 over UDP as JSON.
 
 📌 Notes
@@ -82,12 +79,3 @@ Writing Python pipelines for real-world SOC needs
 Integrating open-source threat intelligence
 
 Designing safe, stateful ETL logic
-
-Demonstrating both GRC awareness and technical fluency
-
-🧑‍💻 Author
-Eric Passeno
-CISSP | Detection Engineer | Security Automation Enthusiast
-📁 eric-cyber.com
-🐙 GitHub
-
