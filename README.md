@@ -29,10 +29,6 @@ This project demonstrates how to build a lightweight, Python-based data pipeline
 ├── config/
 │ └── checkpoint.json # Tracks last processed log_id
 
-yaml
-Copy
-Edit
-
 ---
 
 ## ⚙️ Setup Instructions
