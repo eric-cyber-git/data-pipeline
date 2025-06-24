@@ -48,16 +48,13 @@ pip install pyodbc requests
 ```
 VT_API_KEY="your_virustotal_api_key"
 ```
-### 4. Create Database
-   
-### 4.a Create the table and fill it with sample data
-   ```
+### 4. Create Database, table and fill it with sample data
+```
 sample_data/create_web_application_logs.sql
+```
+### 5 Update the connect string within "sql_extract.py" with your details
    ```
-
-### 4.b Update the connect string within "sql_extract.py" with your details
-   ```
-    conn = pyodbc.connect(
+conn = pyodbc.connect(
     "DRIVER={YOUR-DRIVER};"
     "SERVER=YOUR-SERVER;"
     "DATABASE=YOUR-Database;"
@@ -66,7 +63,7 @@ sample_data/create_web_application_logs.sql
 )
    ```
 
-### 5. Run the Pipeline
+### 6. Run the Pipeline
 ```
 python main.py
 ```
