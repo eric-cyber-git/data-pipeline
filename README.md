@@ -50,24 +50,21 @@ VT_API_KEY="your_virustotal_api_key"
 ```
 ### 4. Create Database
    
-####4.a Create the database you are going to use when replicating this process
-   
-####4.b Create the table and fill it with sample data
+### 4.a Create the table and fill it with sample data
    ```
 sample_data/create_web_application_logs.sql
    ```
 
-####4.c Update the connect string within "sql_extract.py" with your details
+### 4.b Update the connect string within "sql_extract.py" with your details
    ```
     conn = pyodbc.connect(
-    "DRIVER={ODBC Driver 18 for SQL Server};"
-    "SERVER=SERVER-HOSTNAME;"
-    "DATABASE=YOU-NEW-Database;"
+    "DRIVER={YOUR-DRIVER};"
+    "SERVER=YOUR-SERVER;"
+    "DATABASE=YOUR-Database;"
     "Trusted_Connection=yes;"
     "TrustServerCertificate=yes;"
 )
    ```
-
 
 ### 5. Run the Pipeline
 ```
