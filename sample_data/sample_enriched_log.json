@@ -1,0 +1,22 @@
+{
+    "log_id": 67,
+    "timestamp": "2025-06-21 23:03:47",
+    "user_id": null,
+    "ip_address": "204.76.203.208",
+    "resource": "/login",
+    "http_method": "POST",
+    "response_code": 500,
+    "user_agent": "python-requests/2.28",
+    "query": "username=anything' OR 'x'='x&password=123",
+    "ip_hit_count": 2,
+    "Malicious_Score": 10,
+    "Harmless_Score": 54,
+    "Suspicious_Score": 3,
+    "Undetected_Score": 27,
+    "ASN": 51396,
+    "Country": "NL",
+    "Network": "204.76.203.0/24",
+    "Regional_Internet_Registry": "RIPE NCC",
+    "First_Seen": null,
+    "Last_Modified": 1750788713
+}
