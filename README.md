@@ -29,7 +29,7 @@ main.py                         # Entry point for executing the pipeline
       -checkpoint.json          # Tracks last processed log_id
    sample_data/
       -create_logs.sql          # Creates table and inserts logs
-      -sample_enriched_log.json # Creates table and inserts logs
+      -enriched_log.json        # Creates table and inserts logs
 ```  
 ---
 
