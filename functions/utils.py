@@ -2,7 +2,7 @@ import json
 import os
 from datetime import datetime
 
-CHECKPOINT_FILE = "../config/checkpoint.json"
+CHECKPOINT_FILE = "config/checkpoint.json"
 
 def load_checkpoint():
     """
