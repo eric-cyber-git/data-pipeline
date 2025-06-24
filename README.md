@@ -65,7 +65,7 @@ conn = pyodbc.connect(
 )
    ```
 
-### 6. Run the Pipeline
+### 6. Run the Pipeline from the project folder
 ```
 python main.py
 ```
