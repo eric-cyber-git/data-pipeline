@@ -28,8 +28,8 @@ main.py                         # Entry point for executing the pipeline
    config/
       -checkpoint.json          # Tracks last processed log_id
    sample_data/
-      -create_web_application_logs.sql
-      -sample_enriched_log.json
+      -create_logs.sql          # Creates table and inserts logs
+      -sample_enriched_log.json # Creates table and inserts logs
 ```  
 ---
 
@@ -53,7 +53,7 @@ VT_API_KEY="your_virustotal_api_key"
 ```
 ### 4. Create Database, table and fill it with sample data
 ```
-sample_data/create_web_application_logs.sql
+sample_data/create_logs.sql 
 ```
 ### 5. Update the connect string within "sql_extract.py" with your details
    ```
