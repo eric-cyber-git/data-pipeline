@@ -37,6 +37,8 @@ main.py                         # Entry point for executing the pipeline
 - Local Microsoft SQL Server (with `web_application` table)
 - Splunk or any syslog-compatible listener
 - VirusTotal API key
+- Appropriate ODBC Driver Installed
+  
 
 ### 2. Install Dependencies
 ```
@@ -46,9 +48,26 @@ pip install pyodbc requests
 ```
 VT_API_KEY="your_virustotal_api_key"
 ```
-### 4. Create Database Table
+### 4. Create Database
+   
+####4.a Create the database you are going to use when replicating this process
+   
+####4.b Create the table and fill it with sample data
+   ```
+sample_data/create_web_application_logs.sql
+   ```
 
-Populate this table with sample or real log data.
+####4.c Update the connect string within "sql_extract.py" with your details
+   ```
+    conn = pyodbc.connect(
+    "DRIVER={ODBC Driver 18 for SQL Server};"
+    "SERVER=SERVER-HOSTNAME;"
+    "DATABASE=YOU-NEW-Database;"
+    "Trusted_Connection=yes;"
+    "TrustServerCertificate=yes;"
+)
+   ```
+
 
 ### 5. Run the Pipeline
 ```
