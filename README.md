@@ -40,8 +40,7 @@ main.py                         # Entry point for executing the pipeline
 - Local Microsoft SQL Server (with `web_application` table)
 - Splunk or any syslog-compatible listener
 - VirusTotal API key
-- Appropriate ODBC Driver Installed
-  
+- Appropriate ODBC Driver Installed   
 
 ### 2. Install Dependencies
 ```
