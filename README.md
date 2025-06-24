@@ -19,14 +19,17 @@ This project demonstrates how to build a lightweight, Python-based data pipeline
 ## Project Structure
 ```
 main.py                         # Entry point for executing the pipeline
-   Functions/
-      -Sql_extract.py           # SQL fetch logic & DB abstraction
+   sunctions/
+      -sql_extract.py           # SQL fetch logic & DB abstraction
       -enrich.py                # IP enrichment logic
       -send_logs.py             # Syslog output module
       -utils.py                 # Checkpoint file management
       -virus_total_ap.py        # VirusTotal API integration
    config/
       -checkpoint.json          # Tracks last processed log_id
+   sample_data/
+      -create_web_application_logs.sql
+      -sample_enriched_log.json
 ```  
 ---
 
@@ -52,7 +55,7 @@ VT_API_KEY="your_virustotal_api_key"
 ```
 sample_data/create_web_application_logs.sql
 ```
-### 5 Update the connect string within "sql_extract.py" with your details
+### 5. Update the connect string within "sql_extract.py" with your details
    ```
 conn = pyodbc.connect(
     "DRIVER={YOUR-DRIVER};"
