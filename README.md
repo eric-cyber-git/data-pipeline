@@ -19,7 +19,7 @@ This project demonstrates how to build a lightweight, Python-based data pipeline
 ## Project Structure
 ```
 main.py                         # Entry point for executing the pipeline
-   sunctions/
+   functions/
       -sql_extract.py           # SQL fetch logic & DB abstraction
       -enrich.py                # IP enrichment logic
       -send_logs.py             # Syslog output module
